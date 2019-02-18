@@ -1,0 +1,17 @@
+button {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  background: white center no-repeat;
+  background-size: 13px 13px;
+  cursor: pointer;
+}
+
+.plus {
+  background-image: url('../images/plus.svg');
+}
+
+.minus {
+  background-image: url('../images/minus.svg');
+}

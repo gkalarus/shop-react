@@ -1,0 +1,50 @@
+div.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #000;
+
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background-color: azure;
+  z-index: 100;
+}
+
+main {
+  margin-top: 100px;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  background-color: orangered;
+}
+
+aside {
+  background-color: royalblue;
+}
+
+footer {
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+}
+
+
+@media (min-width: 800px) {
+  main {
+    flex-direction: row;
+  }
+
+  aside {
+    min-width: 200px;
+    min-height: 400px;
+  }
+}

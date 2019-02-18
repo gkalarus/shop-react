@@ -1,0 +1,24 @@
+.page ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+
+}
+
+.page li {
+  margin: 20px;
+  width: 250px;
+  height: 400px;
+  background-color: purple;
+}
+
+
+@media (min-width: 600px) {
+  .page ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+}
