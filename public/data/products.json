@@ -56,7 +56,7 @@
 				"values": [
 					{
 						"id": 1000,
-						"name": "Silver",
+						"name": "Aqua",
 						"priceModifier": 0
 					},
 					{
@@ -106,17 +106,17 @@
 				"values": [
 					{
 						"id": 1000,
-						"name": "white",
+						"name": "White",
 						"priceModifier": 0
 					},
 					{
 						"id": 1001,
-						"name": "blue",
+						"name": "Blue",
 						"priceModifier": 10
 					},
 					{
 						"id": 1002,
-						"name": "lime",
+						"name": "Lime",
 						"priceModifier": 20
 					},
 					{

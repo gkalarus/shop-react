@@ -11,7 +11,8 @@ class App extends Component {
 
   state = {
     products: null,
-    cart: []
+    cart: [],
+    user: null
   }
   
   componentDidMount() {
@@ -24,14 +25,15 @@ class App extends Component {
     })
   }
 
-  handleAddItem = (id, name, price, counter) => {
-    console.log(id, name, price);
-    let currentCart = this.state.cart;
-    currentCart.push({id, name, price, counter})
- 
+  handleSendToCart = (product) => {
+
+    const tempCart = this.state.cart
+    tempCart.push(product)
+    
     this.setState({
-      cart: currentCart
+      cart: tempCart
     })
+    
   };
 
   render() {
@@ -50,7 +52,8 @@ class App extends Component {
             <section className="page">
               <Page 
                 products={this.state.products} 
-                handleAddItem={this.handleAddItem}
+                handleSendToCart={this.handleSendToCart}
+                cart={this.state.cart}
               />
             </section>
           </main>

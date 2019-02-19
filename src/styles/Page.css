@@ -1,4 +1,4 @@
-.page ul {
+.page .products ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,7 +7,7 @@
 
 }
 
-.page li {
+.page .products li {
   margin: 20px;
   width: 250px;
   height: 400px;
@@ -16,7 +16,7 @@
 
 
 @media (min-width: 600px) {
-  .page ul {
+  .page .products ul {
     flex-direction: row;
     flex-wrap: wrap;
   }

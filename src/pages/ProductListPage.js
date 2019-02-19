@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/ProductListPage.css';
 import Product from '../components/Product';
 
-const ProductListPage = ({products, handleAddItem}) => {
+const ProductListPage = ({products, handleSendToCart}) => {
   if(!products) {
     return <div>Loading...</div>
   } else {
@@ -11,7 +11,7 @@ const ProductListPage = ({products, handleAddItem}) => {
       <Product 
         key={item.id} 
         info={item} 
-        handleAddItem={handleAddItem}
+        handleSendToCart={handleSendToCart}
       />
     ));
     return (

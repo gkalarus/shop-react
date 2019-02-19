@@ -6,7 +6,8 @@ class Product extends React.Component {
 
   state = {
     id: null,
-    quantity: 0,
+    name: null,
+    quantity: 1,
     price: null,
     colorId: '',
     colorValue: null,
@@ -20,6 +21,7 @@ class Product extends React.Component {
     const info = this.props.info;
     this.setState({
       id: info.id,
+      name: info.name,
       price: info.price,
       colorId: info.options[0].values[0].id,
       colorValue: info.options[0].values[0].name,
@@ -37,17 +39,16 @@ class Product extends React.Component {
         quantity: prevState.quantity + 1
       }
     })
-
   }
 
   handleDeleteItem = () => {
-
-    this.setState((prevState) => {
-      return {
-        quantity: prevState.quantity - 1
-      }
-    })
-
+    if(this.state.quantity !== 1) {
+      this.setState((prevState) => {
+        return {
+          quantity: prevState.quantity - 1
+        }
+      })
+    }
   }
 
 
@@ -79,6 +80,7 @@ class Product extends React.Component {
     })
   }
 
+
   render() {
 
     const info = this.props.info;
@@ -105,6 +107,9 @@ class Product extends React.Component {
             {capacityList}
           </select>
         </label>
+        <button onClick={this.props.handleSendToCart.bind(this, this.state)}>Add to cart</button>
+        <div>Price: ${this.state.price + this.state.colorPriceModifier + this.state.capacityPriceModifier}</div>
+        <div>Sum: ${((this.state.price + this.state.colorPriceModifier + this.state.capacityPriceModifier) * this.state.quantity).toFixed(2)}</div>
       </li>
     )
   }

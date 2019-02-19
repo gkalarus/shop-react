@@ -16,11 +16,13 @@ const Page = (props) => {
         <Route path="/products" exact render={() => (
           <ProductListPage 
             products={props.products}  
-            handleAddItem={props.handleAddItem}
+            handleSendToCart={props.handleSendToCart}
           />
           )}/>
         <Route path="/login" exact component={LoginPage} /> 
-        <Route path="/order" exact component={OrderPage} />
+        <Route path="/order" exact render={() => (
+          <OrderPage cart={props.cart} />
+        )} />
       </Switch>
   );
 }
