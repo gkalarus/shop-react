@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Product.css';
+import uuid from 'uuid';
 
 class Product extends React.Component {
 
@@ -14,7 +15,8 @@ class Product extends React.Component {
     capacityId: '',
     capacityValue: null,
     colorPriceModifier: null,
-    capacityPriceModifier: null
+    capacityPriceModifier: null,
+    clickCounter: 0
   }
 
   componentDidMount() {
@@ -80,6 +82,15 @@ class Product extends React.Component {
     })
   }
 
+  handleSendItem = () => {
+    this.props.handleSendToCart(this.state, uuid.v4())
+    this.setState(prevState => {
+      return {
+        clickCounter: prevState.clickCounter + 1
+      }
+    })
+  }
+
 
   render() {
 
@@ -107,7 +118,7 @@ class Product extends React.Component {
             {capacityList}
           </select>
         </label>
-        <button onClick={this.props.handleSendToCart.bind(this, this.state)}>Add to cart</button>
+        <button onClick={this.handleSendItem}>Add to cart</button>
         <div>Price: ${this.state.price + this.state.colorPriceModifier + this.state.capacityPriceModifier}</div>
         <div>Sum: ${((this.state.price + this.state.colorPriceModifier + this.state.capacityPriceModifier) * this.state.quantity).toFixed(2)}</div>
       </li>

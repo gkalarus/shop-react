@@ -21,7 +21,10 @@ const Page = (props) => {
           )}/>
         <Route path="/login" exact component={LoginPage} /> 
         <Route path="/order" exact render={() => (
-          <OrderPage cart={props.cart} />
+          <OrderPage 
+            cart={props.cart} 
+            handleDeleteFromCart={props.handleDeleteFromCart}
+          />
         )} />
       </Switch>
   );

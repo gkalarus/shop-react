@@ -25,16 +25,30 @@ class App extends Component {
     })
   }
 
-  handleSendToCart = (product) => {
 
-    const tempCart = this.state.cart
-    tempCart.push(product)
+  handleSendToCart = (product, uuid) => {
+
+    const tempCart = this.state.cart;
+    let targetProduct = product;
+    targetProduct.uuid = uuid;
+    tempCart.push(targetProduct)
     
     this.setState({
       cart: tempCart
     })
     
   };
+
+  handleDeleteFromCart = id => {
+    console.log(id);
+    let cart = this.state.cart;
+    let newCart = cart.filter(obj => obj.uuid !== id);
+    this.setState({
+      cart: newCart
+    })
+
+
+  }
 
   render() {
 
@@ -54,6 +68,7 @@ class App extends Component {
                 products={this.state.products} 
                 handleSendToCart={this.handleSendToCart}
                 cart={this.state.cart}
+                handleDeleteFromCart={this.handleDeleteFromCart}
               />
             </section>
           </main>
