@@ -1,0 +1,15 @@
+.cartContainer {
+  position: relative;
+}
+
+.cartIcon {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border: none;
+    outline: none;
+    background: url('../images/cart.svg') no-repeat center;
+    margin: 0 0 0 20px;
+    cursor: pointer;
+}
+

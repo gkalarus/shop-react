@@ -1,6 +1,33 @@
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
   background-color: greenyellow;
+}
+
+.header h1 {
+  font-size: 30px;
+}
+
+.header .cartIcon {
+  margin-bottom: 10px;
+}
+
+
+@media (min-width: 400px) {
+  .header {
+    flex-direction: row;
+  }
+  .header h1 {
+    margin-left: 40px;
+  }
+  
+  .header .cartIcon {
+    margin-right: 40px;
+  }
+  
 }

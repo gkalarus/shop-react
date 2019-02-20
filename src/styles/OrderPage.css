@@ -1,0 +1,28 @@
+.subOrder {
+  position: absolute;
+  top: 50px;
+  right: -104px;
+  width: 270px;
+  height: 200px;
+  background-color: white;
+  z-index: 100;
+  cursor: auto;
+  padding: 30px;
+  overflow-y: scroll;
+  display: none;
+}
+
+.subOrder.subActive {
+  display: block;
+}
+
+
+@media (min-width: 400px) {
+  .subOrder {
+    right: 43px;
+  }
+  .subOrder::before {
+    right: 15px;
+  }
+  
+}

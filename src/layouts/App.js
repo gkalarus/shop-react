@@ -40,13 +40,11 @@ class App extends Component {
   };
 
   handleDeleteFromCart = id => {
-    console.log(id);
     let cart = this.state.cart;
     let newCart = cart.filter(obj => obj.uuid !== id);
     this.setState({
       cart: newCart
     })
-
 
   }
 
@@ -57,7 +55,10 @@ class App extends Component {
       <Router>
         <div className="app">
           <header>
-            <Header />
+            <Header 
+              cart={this.state.cart} 
+              handleDeleteFromCart={this.handleDeleteFromCart}
+            />
           </header>
           <main>
             <aside>

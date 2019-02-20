@@ -24,6 +24,7 @@ const Page = (props) => {
           <OrderPage 
             cart={props.cart} 
             handleDeleteFromCart={props.handleDeleteFromCart}
+            orderClass='mainOrder'
           />
         )} />
       </Switch>
