@@ -9,7 +9,7 @@
   outline: none;
 }
 
-.removeOrder:hover{
+.removeOrder:hover {
   background: no-repeat center url('../images/removeRed.svg');
   background-size: 10px 10px;
 }
@@ -24,7 +24,7 @@
 
 .mainOrder .itemColor {
   font-weight: bold;
-  color: #FF9900;
+  color: #E71D36;
 }
 
 .mainOrder .itemCapacity {
@@ -62,7 +62,7 @@
 
 .subOrder .itemColor {
   font-weight: bold;
-  color: #FF9F1C;
+  color: #E71D36;
 }
 
 .subOrder .itemCapacity {

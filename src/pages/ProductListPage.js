@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/ProductListPage.css';
 import Product from '../components/Product';
 
 const ProductListPage = ({products, handleSendToCart}) => {

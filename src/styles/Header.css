@@ -41,12 +41,13 @@
   .header {
     flex-direction: row;
   }
+
   .header h1 {
     margin-left: 20px;
   }
-  
+
   .header .cartIcon {
     margin-right: 20px;
   }
-  
+
 }

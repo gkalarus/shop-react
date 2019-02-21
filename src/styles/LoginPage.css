@@ -11,10 +11,14 @@ form.loginForm {
 
 .loginForm span {
   font-size: 10px;
-  color: red;
+  color: #c49d9d;
+  font-weight: bold;
 }
 
-input[type=text], input[type=email], input[type=password], input[type=number] {
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number] {
   padding: 12px 20px;
   margin: 8px 0;
   border: 1px solid #ccc;
@@ -77,7 +81,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   50% {
     transform: scale(1);
   }
-  
+
   75% {
     transform: scale(0.95);
   }
@@ -86,4 +90,3 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
     transform: scale(1);
   }
 }
-

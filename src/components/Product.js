@@ -5,7 +5,6 @@ import phone from '../images/iphone.png'
 
 class Product extends React.Component {
 
-
   state = {
     id: null,
     name: null,

@@ -26,6 +26,7 @@ img {
   background-color: #1D3557;
   z-index: 10;
 }
+
 .customSelect select {
   border: none;
   outline: none;
@@ -41,6 +42,7 @@ img {
   font-size: 14px;
   color: #fff;
 }
+
 .customSelect:after {
   position: absolute;
   right: 0;
@@ -60,30 +62,29 @@ img {
   color: #000;
 }
 
-
-
 .btnSendToCart {
-  background-color: #FF9F1C; 
-  color: #E71D36;
+  background-color: #FF9F1C;
+  color: #3e1cff;
   font-size: 16px;
   text-align: center;
   padding: 10px 18px;
-	position: relative;
-  border: 1px solid rgba(255,255,255,0.5);
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   cursor: pointer;
-	transition: all 0.5s;
+  transition: all 0.5s;
   outline: none;
   text-transform: uppercase;
   font-weight: bold;
-  
+
 }
 
 .btnSendToCart:hover {
-	border-radius: 25px;	
+  border-radius: 25px;
 }
 
 
-button.plus, button.minus {
+button.plus,
+button.minus {
   height: 26px;
   width: 26px;
   padding: 0;

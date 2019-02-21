@@ -5,9 +5,6 @@ import ProductListPage from '../pages/ProductListPage';
 import LoginPage from '../pages/LoginPage';
 import LogoutPage from '../pages/LogoutPage';
 import OrderPage from '../pages/OrderPage';
-
-
-
 import '../styles/Page.css';
 
 
@@ -43,6 +40,7 @@ const Page = (props) => {
             orderClass='mainOrder'
             user={props.user}
             handleOrder={props.handleOrder}
+            success={props.success}
           />
         )} />
       </Switch>

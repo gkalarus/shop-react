@@ -3,8 +3,6 @@ import '../styles/Header.css';
 import Cart from '../components/Cart';
 import { NavLink } from 'react-router-dom';
 
-
-
 const Header = ({cart, handleDeleteFromCart, user, handleOrder}) => {
   return (  
     <div className="header">

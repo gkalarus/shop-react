@@ -6,16 +6,14 @@ import Navigation from './Navigation';
 import Page from './Page';
 import Footer from './Footer';
 
-
 class App extends Component {
 
   state = {
     products: null,
     cart: [],
     user: null,
-
+    success: false
   }
-
   
   componentDidMount() {
     fetch('data/products.json')
@@ -27,7 +25,6 @@ class App extends Component {
     })
   }
 
-
   handleSendToCart = (product, uuid) => {
 
     const tempCart = this.state.cart;
@@ -37,7 +34,6 @@ class App extends Component {
     this.setState({
       cart: tempCart
     })
-    
   };
 
   handleDeleteFromCart = id => {
@@ -46,7 +42,6 @@ class App extends Component {
     this.setState({
       cart: newCart
     })
-
   }
 
   handleGetUserData = (userData) => {
@@ -98,10 +93,17 @@ class App extends Component {
     }
 
     this.setState({
-      cart: []
+      cart: [],
+      success: true
     })
 
     console.log(printObject);
+
+    setTimeout(() => {  
+      this.setState({
+        success: false
+      })
+    }, 3000);
   }
 
   render() {
@@ -134,6 +136,7 @@ class App extends Component {
                 user={this.state.user}
                 handleLogOut={this.handleLogOut}
                 handleOrder={this.handleOrder}
+                success={this.state.success}
               />
             </section>
           </main>

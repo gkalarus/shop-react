@@ -3,8 +3,6 @@ import '../styles/Cart.css';
 import OrderPage from '../pages/OrderPage';
 import CartCounter from '../components/CartCounter';
 
-
-
 class Cart extends React.Component {
   
   state = {
