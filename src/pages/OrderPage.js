@@ -1,11 +1,17 @@
 import React from 'react';
 import Order from '../components/Order';
+import { NavLink } from 'react-router-dom';
 import '../styles/OrderPage.css';
 
 
-const OrderPage = ({cart, handleDeleteFromCart, orderClass, active, user}) => {
+const OrderPage = ({cart, handleDeleteFromCart, orderClass, active, user, handleOrder}) => {
   const orderList = cart.map((item, index) => (
-    <Order key={index} index={index} details={item} handleDeleteFromCart={handleDeleteFromCart}/>
+    <Order 
+      key={index} 
+      index={index} 
+      details={item} 
+      handleDeleteFromCart={handleDeleteFromCart}
+    />
   ));
 
   let sum = 0;
@@ -22,10 +28,9 @@ const OrderPage = ({cart, handleDeleteFromCart, orderClass, active, user}) => {
       {cart.length === 0 && <h3 className="headerInfo">Place your product in the shopping cart...</h3>}
       {cart.length > 0 && <ul>{orderList}</ul>}
       {cart.length > 0 && <h3>total: ${sum.toFixed(2)}</h3>}
-      {(cart.length > 0 && user !== null) && <button>Place an order</button>}
-      {(cart.length > 0 && user === null) && <p>To place an order you need to log in</p>}
+      {(cart.length > 0 && user !== null) && <button className="orderButton" onClick={handleOrder}><span>Place an order</span></button>}
+      {(cart.length > 0 && user === null) && <p className="loginInfo">To place an order you need to <NavLink to='/login'>log in</NavLink> to your account</p>}
     </div>
-    
   );
 }
  

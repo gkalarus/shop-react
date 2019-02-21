@@ -72,6 +72,38 @@ class App extends Component {
     })
   }
 
+  handleOrder = () => {
+    let products = this.state.cart
+    console.log(products)
+    let printProducts = products.map(product => (
+      {
+        id: product.id,
+        options: [
+          {
+            id: product.color,
+            value: product.colorId
+          },
+          {
+            id: product.capacity,
+            value: product.capacityId
+          }
+        ],
+        amount: product.price
+      }
+    ));
+
+    let printObject = {
+      user: this.state.user,
+      products: printProducts
+    }
+
+    this.setState({
+      cart: []
+    })
+
+    console.log(printObject);
+  }
+
   render() {
 
     return (
@@ -100,6 +132,7 @@ class App extends Component {
                 handleGetUserData={this.handleGetUserData}
                 user={this.state.user}
                 handleLogOut={this.handleLogOut}
+                handleOrder={this.handleOrder}
               />
             </section>
           </main>

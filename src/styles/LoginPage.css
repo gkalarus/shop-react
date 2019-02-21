@@ -33,6 +33,13 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   text-transform: uppercase;
 }
 
+.loginForm button:hover {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
 .loginForm .group {
   display: flex;
   flex-direction: column;
@@ -56,22 +63,27 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
 
 }
 
-/* 
-.loginForm label {
-  display: block;
+@keyframes pulse {
+
+  0% {
+    transform: scale(1);
+
+  }
+
+  25% {
+    transform: scale(1.05);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+  
+  75% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
-.loginForm input {
-  margin-left: 20px;
-  margin-top: 20px;
-}
-
-.loginForm input[type='checkbox'] {
-  margin-left: 0;
-  margin-right: 10px;
-}
-
-.loginForm span {
-  color: red;
-  font-size: 10px;
-} */

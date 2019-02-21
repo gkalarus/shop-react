@@ -10,6 +10,7 @@ import OrderPage from '../pages/OrderPage';
 
 import '../styles/Page.css';
 
+
 const Page = (props) => {
   return (  
       <Switch>
@@ -41,10 +42,12 @@ const Page = (props) => {
             handleDeleteFromCart={props.handleDeleteFromCart}
             orderClass='mainOrder'
             user={props.user}
+            handleOrder={props.handleOrder}
           />
         )} />
       </Switch>
   );
 }
  
+
 export default Page;
