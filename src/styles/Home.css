@@ -1,7 +1,6 @@
 .homeClass {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100%;
   background: url('../images/page.jpg') no-repeat center center; 
@@ -14,4 +13,19 @@
 .homeClass h3 {
   text-transform: uppercase;
   margin-bottom: 20px;
+  background-color: #FDFFFC;
+  color: #011627;
+  padding: 20px;
+}
+
+.homeClass p {
+  background-color: #FDFFFC;
+  color: #011627;
+  padding: 20px;
+}
+
+@media (min-width: 800px) {
+  .homeClass {
+    margin-top: 30px;
+  }
 }

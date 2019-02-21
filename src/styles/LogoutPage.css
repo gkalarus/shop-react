@@ -1,6 +1,7 @@
 .logoutPage {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 30px;
 }
@@ -8,7 +9,7 @@
 .logoutPage p {
   font-size: 30px;
   letter-spacing: 1.5px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .logoutPage button {
