@@ -26,11 +26,12 @@ class Cart extends React.Component {
           <CartCounter cart={this.props.cart} />
         </button>
         <OrderPage 
-        cart={this.props.cart} 
-        handleDeleteFromCart={this.props.handleDeleteFromCart}
-        orderClass='subOrder'
-        active={this.state.active}
-        user={this.props.user}
+          cart={this.props.cart} 
+          handleDeleteFromCart={this.props.handleDeleteFromCart}
+          orderClass='subOrder'
+          active={this.state.active}
+          user={this.props.user}
+          handleOrder={this.props.handleOrder}
         />
       </div>
     )

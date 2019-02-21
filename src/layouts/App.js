@@ -74,7 +74,6 @@ class App extends Component {
 
   handleOrder = () => {
     let products = this.state.cart
-    console.log(products)
     let printProducts = products.map(product => (
       {
         id: product.id,
@@ -88,7 +87,8 @@ class App extends Component {
             value: product.capacityId
           }
         ],
-        amount: product.price
+        amount: product.price,
+        quantity: product.quantity
       }
     ));
 
@@ -115,6 +115,7 @@ class App extends Component {
               cart={this.state.cart} 
               handleDeleteFromCart={this.handleDeleteFromCart}
               user={this.state.user}
+              handleOrder={this.handleOrder}
             />
           </header>
           <main>

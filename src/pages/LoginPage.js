@@ -12,7 +12,6 @@ class LoginPage extends React.Component {
     city: '',
     postCode: '',
     pass: '',
-    accept: false,
     message: '',
     errors: {
       firstName: false,
@@ -23,7 +22,6 @@ class LoginPage extends React.Component {
       city: false,
       postCode: false,
       pass: false,
-      accept: false,
     }
   }
 
@@ -36,7 +34,6 @@ class LoginPage extends React.Component {
     postCode_incorrect: 'The postcode must contain the following format XX-XXX',
     email_incorrect: 'Your email is missing @',
     password_incorrect: 'Your password must contain more than 5 characters',
-    accept_incorrect: 'Niepotwierdzona zgoda'
   }
 
   handleChange = (e) => {
@@ -68,7 +65,6 @@ class LoginPage extends React.Component {
         city: '',
         postCode: '',
         pass: '',
-        accept: false,
         message: 'Formularz został wysłany',
         errors: {
           firstName: false,
@@ -79,10 +75,8 @@ class LoginPage extends React.Component {
           city: false,
           postCode: false,
           pass: false,
-          accept: false,
         }
       })
-      console.log('Formularz Wysłany')
     } else {
       this.setState({
         errors: {
@@ -94,7 +88,6 @@ class LoginPage extends React.Component {
           city: !validation.city,
           postCode: !validation.postCode,
           pass: !validation.password,
-          accept: !validation.accept,
         }
       })
     }
@@ -109,7 +102,6 @@ class LoginPage extends React.Component {
     let city = false;
     let postCode = false;
     let password = false;
-    let accept = false;
     let correct = false;
 
     if(this.state.firstName.length > 2) {
@@ -142,10 +134,6 @@ class LoginPage extends React.Component {
 
     if(this.state.pass.length > 4) {
       password = true;
-    }
-
-    if(this.state.accept) {
-      accept = true;
     }
 
     if(firstName && lastName && email && street && houseNumber && city && postCode && password) {

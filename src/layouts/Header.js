@@ -5,13 +5,18 @@ import { NavLink } from 'react-router-dom';
 
 
 
-const Header = ({cart, handleDeleteFromCart, user}) => {
+const Header = ({cart, handleDeleteFromCart, user, handleOrder}) => {
   return (  
     <div className="header">
       <h1>PickYourPhone</h1>
       <div className="headerRight">
         {user !== null ? <h3>Hello {user.name}</h3> : <NavLink to='/login'>Log in</NavLink>}
-        <Cart cart={cart} handleDeleteFromCart={handleDeleteFromCart} user={user} />
+        <Cart 
+          cart={cart} 
+          handleDeleteFromCart={handleDeleteFromCart} 
+          user={user} 
+          handleOrder={handleOrder}
+        />
       </div>
     </div>
   );

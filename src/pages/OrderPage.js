@@ -5,6 +5,7 @@ import '../styles/OrderPage.css';
 
 
 const OrderPage = ({cart, handleDeleteFromCart, orderClass, active, user, handleOrder}) => {
+  
   const orderList = cart.map((item, index) => (
     <Order 
       key={index} 
