@@ -33,8 +33,9 @@
   font-size: 12px;
 }
 
-.subOrder h3 {
+.subOrder h3.headerInfo {
   font-size: 18px;
+  color: #000;
 }
 
 .mainOrder {

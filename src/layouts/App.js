@@ -34,7 +34,6 @@ class App extends Component {
     let targetProduct = product;
     targetProduct.uuid = uuid;
     tempCart.push(targetProduct)
-    
     this.setState({
       cart: tempCart
     })
@@ -50,6 +49,29 @@ class App extends Component {
 
   }
 
+  handleGetUserData = (userData) => {
+    let user = {
+      name: userData.firstName,
+      surname: userData.lastName,
+      email: userData.email,
+      address: {
+        street: userData.street,
+        houseNumber: userData.houseNumber,
+        city: userData.city,
+        postcode: userData.postCode
+      }
+    }
+    this.setState({
+      user
+    })
+  }
+
+  handleLogOut = () => {
+    this.setState({
+      user: null
+    })
+  }
+
   render() {
 
     return (
@@ -60,11 +82,14 @@ class App extends Component {
             <Header 
               cart={this.state.cart} 
               handleDeleteFromCart={this.handleDeleteFromCart}
+              user={this.state.user}
             />
           </header>
           <main>
             <aside>
-              <Navigation />
+              <Navigation 
+                user={this.state.user}
+              />
             </aside>
             <section className="page">
               <Page 
@@ -72,6 +97,9 @@ class App extends Component {
                 handleSendToCart={this.handleSendToCart}
                 cart={this.state.cart}
                 handleDeleteFromCart={this.handleDeleteFromCart}
+                handleGetUserData={this.handleGetUserData}
+                user={this.state.user}
+                handleLogOut={this.handleLogOut}
               />
             </section>
           </main>

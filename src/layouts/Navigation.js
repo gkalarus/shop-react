@@ -9,21 +9,47 @@ const list = [
   {name: "Order", path: "/order"},
 ]
 
-const Navigation = () => {
+const list2 = [
+  {name: "Welcome", path: "/", exact: true},
+  {name: "Shop", path: "/shop"},
+  {name: "Log out", path: "/logout"},
+  {name: "Order", path: "/order"},
+]
+
+
+const Navigation = ({user}) => {
 
   const menu = list.map(item => (
     <li key={item.name}>
       <NavLink to={item.path} exact={item.exact ? item.exact : false}>{item.name}</NavLink>
     </li>
-  ));
+  )); 
 
-  return (  
-    <nav className="navigation">
-      <ul>
-        {menu}
-      </ul>
-    </nav>
-  );
+  const menu2 = list2.map(item => (
+    <li key={item.name}>
+      <NavLink to={item.path} exact={item.exact ? item.exact : false}>{item.name}</NavLink>
+    </li>
+  )); 
+
+  if(user === null) {
+    return (  
+      <nav className="navigation">
+        <ul>
+          {menu}
+        </ul>
+      </nav>
+    );
+  } else {
+    return (  
+      <nav className="navigation">
+        <ul>
+          {menu2}
+        </ul>
+      </nav>
+    );
+  }
+
+
 }
  
 

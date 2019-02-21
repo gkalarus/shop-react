@@ -19,7 +19,7 @@ const OrderPage = ({cart, handleDeleteFromCart, orderClass, active}) => {
 
   return (  
     <div className={`${orderClass} ${active === true ? 'subActive' : ''}`}>
-      {cart.length === 0 && <h3>Place your product in the shopping cart...</h3>}
+      {cart.length === 0 && <h3 className="headerInfo">Place your product in the shopping cart...</h3>}
       {cart.length > 0 && <ul>{orderList}</ul>}
       {cart.length > 0 && <h3>total: ${sum.toFixed(2)}</h3>}
     </div>

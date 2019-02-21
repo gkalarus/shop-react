@@ -14,6 +14,24 @@
   color: #fff
 }
 
+.header h3 {
+  color: #fff;
+  font-size: 15px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.headerRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header .cartIcon {
   margin-bottom: 10px;
 }

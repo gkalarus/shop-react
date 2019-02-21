@@ -64,16 +64,17 @@ img {
 
 .btnSendToCart {
   background-color: #FF9F1C; 
-  color: rgba(255,255,255,1);
+  color: #E71D36;
   font-size: 16px;
   text-align: center;
-  padding: 10px 32px;
+  padding: 10px 18px;
 	position: relative;
   border: 1px solid rgba(255,255,255,0.5);
   cursor: pointer;
 	transition: all 0.5s;
   outline: none;
-  
+  text-transform: uppercase;
+  font-weight: bold;
   
 }
 

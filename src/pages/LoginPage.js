@@ -56,8 +56,9 @@ class LoginPage extends React.Component {
     e.preventDefault();
 
     const validation = this.formValidation();
-
     if(validation.correct) {
+      this.props.handleGetUserData(this.state);
+
       this.setState({
         firstName: '',
         lastName: '',

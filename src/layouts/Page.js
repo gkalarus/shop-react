@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import ProductListPage from '../pages/ProductListPage';
 import LoginPage from '../pages/LoginPage';
+import LogoutPage from '../pages/LogoutPage';
 import OrderPage from '../pages/OrderPage';
 
 
@@ -25,7 +26,13 @@ const Page = (props) => {
           )}/>
         <Route path="/login" exact component={() => (
           <LoginPage 
-            
+            handleGetUserData={props.handleGetUserData}
+          />
+        )} /> 
+        <Route path="/logout" exact component={() => (
+          <LogoutPage 
+            user={props.user}
+            handleLogOut={props.handleLogOut}
           />
         )} /> 
         <Route path="/order" exact render={() => (
