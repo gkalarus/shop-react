@@ -12,14 +12,22 @@ import '../styles/Page.css';
 const Page = (props) => {
   return (  
       <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/products" exact render={() => (
+        <Route path="/" exact render={() => (
+          <HomePage 
+            homeClass='homeClass'
+          />
+        )} />
+        <Route path="/shop" exact render={() => (
           <ProductListPage 
             products={props.products}  
             handleSendToCart={props.handleSendToCart}
           />
           )}/>
-        <Route path="/login" exact component={LoginPage} /> 
+        <Route path="/login" exact component={() => (
+          <LoginPage 
+            
+          />
+        )} /> 
         <Route path="/order" exact render={() => (
           <OrderPage 
             cart={props.cart} 

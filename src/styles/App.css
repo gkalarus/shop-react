@@ -1,6 +1,7 @@
 div.app {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
   max-width: 1200px;
   margin: 0 auto;
@@ -14,8 +15,9 @@ header {
   left: 0;
   height: 100px;
   width: 100%;
-  background-color: azure;
+  background-color: #011627;
   z-index: 100;
+  box-shadow: 1px 8px 42px -3px rgba(0,0,0,0.73);
 }
 
 main {
@@ -23,18 +25,19 @@ main {
   min-height: calc(100vh - 200px);
   display: flex;
   flex-direction: column;
-  background-color: orangered;
-}
-
-aside {
-  background-color: royalblue;
 }
 
 footer {
-  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
   width: 100%;
-  background-color: black;
-  color: #fff;
+  background-color: #011627;
+  text-align: center;
+  font-size: 15px;
+
+
 }
 
 
@@ -44,7 +47,12 @@ footer {
   }
 
   aside {
+    margin-top: 39px;
     min-width: 200px;
     min-height: 400px;
+  }
+
+  section.page {
+    flex-basis: 100%;
   }
 }

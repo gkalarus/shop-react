@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Product.css';
 import uuid from 'uuid';
+import phone from '../images/iphone.png'
 
 class Product extends React.Component {
 
@@ -100,25 +101,28 @@ class Product extends React.Component {
     const colorList = colors.map(color => <option key={color.id} value={color.id}>{color.name}</option>)
     const capacityList = capacities.map(capacity => <option key={capacity.id} value={capacity.id}>{capacity.name}</option>)
 
+
     return (
-      <li>
+      <li className="product">
+        <img src={phone} alt="phone"/>
         <h3>{info.name}</h3>
-        <button className="minus" onClick={this.handleDeleteItem}></button>
-        <p>{this.state.quantity}</p>
-        <button className="plus" onClick={this.handleAddItem}></button>
-        <label>
-          Color:
+        <label className="customSelect">
           <select value={this.state.colorId} onChange={this.handleColorChange}>
             {colorList}
           </select>
         </label>
-        <label>
-          Capacity:
+        <label className="customSelect">
           <select value={this.state.capacityId} onChange={this.handleCapacityChange}>
             {capacityList}
           </select>
         </label>
-        <button onClick={this.handleSendItem}>Add to cart</button>
+        <div className="btnCounter">
+          <button className="minus" onClick={this.handleDeleteItem}></button>
+          <div>{this.state.quantity}</div>
+          <button className="plus" onClick={this.handleAddItem}></button>
+        </div>
+        <button className="btnSendToCart" onClick={this.handleSendItem}>Add to cart</button>
+ 
         <div>Price: ${this.state.price + this.state.colorPriceModifier + this.state.capacityPriceModifier}</div>
         <div>Sum: ${((this.state.price + this.state.colorPriceModifier + this.state.capacityPriceModifier) * this.state.quantity).toFixed(2)}</div>
       </li>

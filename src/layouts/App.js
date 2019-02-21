@@ -12,8 +12,10 @@ class App extends Component {
   state = {
     products: null,
     cart: [],
-    user: null
+    user: null,
+
   }
+
   
   componentDidMount() {
     fetch('data/products.json')

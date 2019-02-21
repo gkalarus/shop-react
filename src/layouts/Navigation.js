@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 import "../styles/Navigation.css";
 
 const list = [
-  {name: "start", path: "/", exact: true},
-  {name: "produkty", path: "/products"},
-  {name: "logowanie", path: "/login"},
-  {name: "zamówienie", path: "/order"},
+  {name: "Welcome", path: "/", exact: true},
+  {name: "Shop", path: "/shop"},
+  {name: "Log in", path: "/login"},
+  {name: "Order", path: "/order"},
 ]
 
 const Navigation = () => {

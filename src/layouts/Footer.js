@@ -4,7 +4,7 @@ import '../styles/Footer.css';
 
 const Footer = () => {
   return (  
-    <div>Footer</div>
+    <div className="footer">&copy; Copyright 2019 <strong>PickYourPhone</strong></div>
   );
 }
  

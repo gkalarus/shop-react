@@ -1,0 +1,93 @@
+.removeOrder {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  background: no-repeat center url('../images/remove.svg');
+  background-size: 22px 22px;
+  border: none;
+  transition: .2s;
+}
+
+.removeOrder:hover{
+  background: no-repeat center url('../images/removeRed.svg');
+  background-size: 10px 10px;
+}
+
+.mainOrder .itemIndex {
+  font-weight: bold;
+}
+
+.mainOrder .itemName {
+  font-weight: bold
+}
+
+.mainOrder .itemColor {
+  font-weight: bold;
+  color: #FF9900;
+}
+
+.mainOrder .itemCapacity {
+  color: #6599FF;
+  font-weight: bold;
+}
+
+.mainOrder .itemQuantity {
+  font-size: 14px;
+  font-weight: bold;
+
+}
+
+.mainOrder .itemTimes {
+  font-size: 12px;
+}
+
+.mainOrder .itemPrice {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mainOrder .removeOrder {
+  margin-left: 28px;
+}
+
+
+.subOrder .itemIndex {
+  font-weight: bold;
+}
+
+.subOrder .itemName {
+  font-weight: bold
+}
+
+.subOrder .itemColor {
+  font-weight: bold;
+  color: #FF9900;
+}
+
+.subOrder .itemCapacity {
+  color: #6599FF;
+  font-weight: bold;
+}
+
+.subOrder .itemQuantity {
+  font-size: 14px;
+  font-weight: bold;
+
+}
+
+.subOrder .itemTimes {
+  font-size: 12px;
+}
+
+.subOrder .itemPrice {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.subOrder .removeOrder {
+  margin-left: 28px;
+  width: 12px;
+  height: 12px;
+  background-size: 12px 12px;
+
+}

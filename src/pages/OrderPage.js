@@ -5,7 +5,7 @@ import '../styles/OrderPage.css';
 
 const OrderPage = ({cart, handleDeleteFromCart, orderClass, active}) => {
   const orderList = cart.map((item, index) => (
-    <Order key={index} details={item} handleDeleteFromCart={handleDeleteFromCart}/>
+    <Order key={index} index={index} details={item} handleDeleteFromCart={handleDeleteFromCart}/>
   ));
 
   let sum = 0;
@@ -19,8 +19,9 @@ const OrderPage = ({cart, handleDeleteFromCart, orderClass, active}) => {
 
   return (  
     <div className={`${orderClass} ${active === true ? 'subActive' : ''}`}>
-      <ul>{orderList}</ul>
-      <h3>total: ${sum.toFixed(2)}</h3>
+      {cart.length === 0 && <h3>Place your product in the shopping cart...</h3>}
+      {cart.length > 0 && <ul>{orderList}</ul>}
+      {cart.length > 0 && <h3>total: ${sum.toFixed(2)}</h3>}
     </div>
   );
 }

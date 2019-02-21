@@ -4,6 +4,7 @@
 		"name": "iPhone 8",
 		"price": 99.99,
 		"oldPrice": 599.00,
+		"photo": "../../src/images/iphone.png",
 		"options": [
 			{
 				"id": 100,
