@@ -3,7 +3,7 @@ import Order from '../components/Order';
 import '../styles/OrderPage.css';
 
 
-const OrderPage = ({cart, handleDeleteFromCart, orderClass, active}) => {
+const OrderPage = ({cart, handleDeleteFromCart, orderClass, active, user}) => {
   const orderList = cart.map((item, index) => (
     <Order key={index} index={index} details={item} handleDeleteFromCart={handleDeleteFromCart}/>
   ));
@@ -22,7 +22,10 @@ const OrderPage = ({cart, handleDeleteFromCart, orderClass, active}) => {
       {cart.length === 0 && <h3 className="headerInfo">Place your product in the shopping cart...</h3>}
       {cart.length > 0 && <ul>{orderList}</ul>}
       {cart.length > 0 && <h3>total: ${sum.toFixed(2)}</h3>}
+      {(cart.length > 0 && user !== null) && <button>Place an order</button>}
+      {(cart.length > 0 && user === null) && <p>To place an order you need to log in</p>}
     </div>
+    
   );
 }
  

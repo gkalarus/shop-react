@@ -30,6 +30,7 @@ class Cart extends React.Component {
         handleDeleteFromCart={this.props.handleDeleteFromCart}
         orderClass='subOrder'
         active={this.state.active}
+        user={this.props.user}
         />
       </div>
     )

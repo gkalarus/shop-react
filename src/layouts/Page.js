@@ -40,6 +40,7 @@ const Page = (props) => {
             cart={props.cart} 
             handleDeleteFromCart={props.handleDeleteFromCart}
             orderClass='mainOrder'
+            user={props.user}
           />
         )} />
       </Switch>

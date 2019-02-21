@@ -11,7 +11,7 @@ const Header = ({cart, handleDeleteFromCart, user}) => {
       <h1>PickYourPhone</h1>
       <div className="headerRight">
         {user !== null ? <h3>Hello {user.name}</h3> : <NavLink to='/login'>Log in</NavLink>}
-        <Cart cart={cart} handleDeleteFromCart={handleDeleteFromCart} />
+        <Cart cart={cart} handleDeleteFromCart={handleDeleteFromCart} user={user} />
       </div>
     </div>
   );

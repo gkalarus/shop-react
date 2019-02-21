@@ -6,6 +6,7 @@
   background-size: 22px 22px;
   border: none;
   transition: .2s;
+  outline: none;
 }
 
 .removeOrder:hover{
