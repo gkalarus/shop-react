@@ -30,6 +30,7 @@ class Cart extends React.Component {
           active={this.state.active}
           user={this.props.user}
           handleOrder={this.props.handleOrder}
+          success={this.props.success}
         />
       </div>
     )

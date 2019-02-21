@@ -118,6 +118,7 @@ class App extends Component {
               handleDeleteFromCart={this.handleDeleteFromCart}
               user={this.state.user}
               handleOrder={this.handleOrder}
+              success={this.state.success}
             />
           </header>
           <main>
