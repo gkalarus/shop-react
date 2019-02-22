@@ -9,5 +9,5 @@ https://gkalarus.github.io/shop
 ## Techologies used
 
 ```
- React.js
+ React.js, react-router-dom
 ```
